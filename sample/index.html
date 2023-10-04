@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CKEditor 5 – document editor build – development sample</title>
+    <style>
+      body {
+        max-width: 1000px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CKEditor 5 – document editor build – development pale</h1>
+
+    <h2>The toolbar</h2>
+    <div class="toolbar-container"></div>
+
+    <h2>The editable</h2>
+    <div id="editor"></div>
+
+    <style>
+      .editable-container,
+      .toolbar-container {
+        position: relative;
+        border: 1px solid #ddd;
+        background: #eee;
+      }
+
+      .toolbar-container {
+        padding: 1em;
+      }
+
+      .editable-container {
+        padding: 3em;
+        overflow-y: scroll;
+        max-height: 500px;
+      }
+
+      .editable-container .ck-content {
+        min-height: 21cm;
+        padding: 2em;
+        border: 1px #d3d3d3 solid;
+        border-radius: var(--ck-border-radius);
+        background: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+
+    <script src="../build/ckeditor.js"></script>
+    <script>
+      ClassicEditor.create(document.querySelector("#editor"))
+        .then((editor) => {
+          window.editor = editor;
+        })
+        .catch((error) => {
+          console.error("There was a problem initializing the editor.", error);
+        });
+    </script>
+  </body>
+</html>
