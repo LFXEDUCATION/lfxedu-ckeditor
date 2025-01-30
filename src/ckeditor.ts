@@ -74,6 +74,7 @@ import { Base64UploadAdapter } from "@ckeditor/ckeditor5-upload";
 import { WordCount } from "@ckeditor/ckeditor5-word-count";
 import { SpecialCharactersEmoji } from "./editor-util";
 import Math from "@isaul32/ckeditor5-math/src/math";
+import AutoformatMath from "@isaul32/ckeditor5-math/src/autoformatmath";
 
 export default class ClassicEditor extends ClassicEditorBase {
   public static override builtinPlugins = [
@@ -111,6 +112,7 @@ export default class ClassicEditor extends ClassicEditorBase {
     List,
     ListProperties,
     Math,
+    AutoformatMath,
     MediaEmbed,
     MediaEmbedToolbar,
     PageBreak,
